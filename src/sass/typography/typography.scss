@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+$heading-font-family: "Bellefair", serif;
+$subheading-body-font-family: "Barlow Condensed", sans-serif;
+
+@mixin fontConfig($fontFamily, $fontWeight, $fontSize, $textTransform) {
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  text-transform: $textTransform;
+}
+
+@mixin heading($heading: 1) {
+  @if $heading == 1 {
+    @include fontConfig($heading-font-family, 400, 9rem, uppercase);
+  } @else if $heading == 2 {
+    @include fontConfig($heading-font-family, 400, 6rem, uppercase);
+  } @else if $heading == 3 {
+    @include fontConfig($heading-font-family, 400, 3rem, uppercase);
+  } @else if $heading == 4 {
+    @include fontConfig($heading-font-family, 400, 2rem, uppercase);
+  } @else {
+    @include fontConfig($subheading-body-font-family, 400, 1.75rem, uppercase);
+    letter-spacing: 0.297rem;
+  }
+}
+
+@mixin subheading($subheading: 1) {
+  @if $subheading == 1 {
+    @include fontConfig($subheading-body-font-family, 400, 1.75rem, uppercase);
+  } @else {
+    @include fontConfig($subheading-body-font-family, 400, 0.8rem, uppercase);
+    letter-spacing: 0.147rem;
+  }
+}
+
+@mixin navText() {
+  @include fontConfig($subheading-body-font-family, 400, 1rem, uppercase);
+  letter-spacing: 0.169rem;
+}
+
+@mixin bodyText() {
+  @include fontConfig($subheading-body-font-family, 400, 1.125rem, none);
+}
