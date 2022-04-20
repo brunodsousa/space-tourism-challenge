@@ -88,6 +88,7 @@ export default {
 
         &:hover {
           border-bottom: 2px solid $white;
+          transition: border-bottom 500ms;
         }
 
         a {
