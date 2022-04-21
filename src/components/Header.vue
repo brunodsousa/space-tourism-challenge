@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="container__logo">
-      <img src="../assets/images/shared/logo.svg" alt="Icon - Space Tourism" />
+      <img src="/images/shared/logo.svg" alt="Icon - Space Tourism" />
     </div>
     <div class="container__divider">
       <div class="container__divider--line"></div>

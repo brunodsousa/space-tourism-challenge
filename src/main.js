@@ -1,7 +1,9 @@
 import Vue from "vue";
-import App from "./App.vue";
+import VueCarousel from "vue-carousel";
 import Home from "./views/Home.vue";
 import "./assets/sass/main.scss";
+
+Vue.use(VueCarousel);
 
 Vue.config.productionTip = false;
 

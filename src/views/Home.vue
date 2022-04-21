@@ -34,7 +34,7 @@ export default {
 
 #home {
   min-height: 100vh;
-  background: url("../assets/images/home/background-home-desktop.jpg") center /
+  background: url("../../public/images/home/background-home-desktop.jpg") center /
     cover no-repeat;
 
   padding-top: 2rem;
