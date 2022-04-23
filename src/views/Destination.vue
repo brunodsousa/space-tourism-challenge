@@ -10,7 +10,7 @@
         :perPage="1"
         :mouse-drag="true"
         :pagination-enabled="false"
-        :navigateTo="destinationSelected"
+        :navigateTo="selectedDestination"
       >
         <slide
           class="carousel__slide"
@@ -69,12 +69,12 @@ export default {
   data() {
     return {
       destinations: data.destinations,
-      destinationSelected: 0,
+      selectedDestination: 0,
     };
   },
   methods: {
     handleNavigationList(index) {
-      this.destinationSelected = index;
+      this.selectedDestination = index;
     },
   },
 };
