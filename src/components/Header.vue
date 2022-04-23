@@ -87,8 +87,8 @@ export default {
         align-items: center;
 
         &:hover {
-          border-bottom: 2px solid $white;
-          transition: border-bottom 500ms;
+          box-shadow: 0 -3px 0 0 $white inset;
+          transition: box-shadow 200ms;
         }
 
         a {
