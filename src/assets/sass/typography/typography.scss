@@ -27,7 +27,7 @@ $subheading-body-font-family: "Barlow Condensed", sans-serif;
 
 @mixin subheading($subheading: 1) {
   @if $subheading == 1 {
-    @include fontConfig($subheading-body-font-family, 400, 1.625rem, uppercase);
+    @include fontConfig($heading-font-family, 400, 1.625rem, uppercase);
   } @else {
     @include fontConfig($subheading-body-font-family, 400, 0.813rem, uppercase);
     letter-spacing: 0.147rem;
