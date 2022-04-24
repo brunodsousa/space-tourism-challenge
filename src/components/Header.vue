@@ -9,16 +9,20 @@
     <div class="container__nav">
       <ul>
         <li>
-          <a href="#" target="_blank"><span>00</span> Home</a>
+          <router-link to="/"> <span>00</span> Home</router-link>
         </li>
         <li>
-          <a href="#" target="_blank"><span>01</span> Destination</a>
+          <router-link to="/destination">
+            <span>01</span> Destination
+          </router-link>
         </li>
         <li>
-          <a href="#" target="_blank"><span>02</span> Crew</a>
+          <router-link to="/crew"> <span>02</span> Crew</router-link>
         </li>
         <li>
-          <a href="#" target="_blank"><span>03</span> Technology</a>
+          <router-link to="/technology">
+            <span>03</span> Technology
+          </router-link>
         </li>
       </ul>
     </div>

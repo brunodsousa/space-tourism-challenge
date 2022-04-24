@@ -13,7 +13,9 @@
         </p>
       </div>
       <div class="content__button">
-        <button>Explore</button>
+        <button>
+          <router-link to="/destination">Explore</router-link>
+        </button>
       </div>
     </div>
   </div>
@@ -85,6 +87,11 @@ export default {
         &:hover {
           outline: 4rem solid rgba(#979797, 0.5);
           transition: outline 2s;
+        }
+
+        a {
+          color: $dark-blue;
+          text-decoration: none;
         }
       }
     }

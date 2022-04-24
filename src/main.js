@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueCarousel from "vue-carousel";
-import Home from "./views/Home.vue";
+import router from "./router";
+import App from "./App.vue";
 import "./assets/sass/main.scss";
 
 Vue.use(VueCarousel);
@@ -8,5 +9,6 @@ Vue.use(VueCarousel);
 Vue.config.productionTip = false;
 
 new Vue({
-  render: (h) => h(Home),
+  router,
+  render: (h) => h(App),
 }).$mount("#app");
