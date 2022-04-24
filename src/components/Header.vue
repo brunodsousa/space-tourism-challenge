@@ -42,7 +42,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 6rem;
+  height: 96px;
   width: 100%;
 
   .container__logo {

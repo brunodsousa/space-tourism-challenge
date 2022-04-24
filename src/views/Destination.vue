@@ -88,14 +88,15 @@ export default {
   background: url("../../public/images/destination/background-destination-desktop.jpg")
     center / cover no-repeat;
 
-  padding-top: 2rem;
+  padding-top: 32px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   .destination__title {
     width: 100%;
     height: 5vh;
-    margin: auto 0 0 0;
+    margin: 50px 0 0 0;
     padding-left: 15%;
 
     h2 {
@@ -112,8 +113,7 @@ export default {
 
   .destination__content {
     width: 100%;
-    height: 60vh;
-    margin: auto 0 2rem 0;
+    height: calc(85vh - 128px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -121,7 +121,12 @@ export default {
     .content__carousel,
     .carousel__slide {
       width: 100%;
-      flex-grow: 1;
+    }
+
+    .content__carousel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .carousel__slide {
