@@ -30,6 +30,7 @@
                   v-for="(destinationNav, index) in destinations"
                   :key="index"
                   @click="handleNavigationList(index)"
+                  :class="{ active: destination.name == destinationNav.name }"
                 >
                   {{ destinationNav.name }}
                 </li>
@@ -167,16 +168,21 @@ export default {
               height: 100%;
               display: flex;
               align-items: center;
-              padding-bottom: 10px;
+              padding: 0 0 10px 0;
               @include navText;
               color: rgba($white, 0.6);
 
               &:hover {
-                box-shadow: 0 -2px 0 0 $white inset;
+                box-shadow: 0 -3px 0 0 rgba($white, 0.3) inset;
                 transition: box-shadow 200ms;
               }
             }
           }
+        }
+
+        .active {
+          box-shadow: 0 -3px 0 0 $white inset;
+          transition: box-shadow 200ms;
         }
 
         .text__container {
