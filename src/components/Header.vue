@@ -8,20 +8,9 @@
     </div>
     <div class="container__nav">
       <ul>
-        <li>
-          <router-link to="/"> <span>00</span> Home</router-link>
-        </li>
-        <li>
-          <router-link to="/destination">
-            <span>01</span> Destination
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/crew"> <span>02</span> Crew</router-link>
-        </li>
-        <li>
-          <router-link to="/technology">
-            <span>03</span> Technology
+        <li v-for="(view, index) in views" :key="index">
+          <router-link :to="view.routePath">
+            <span>0{{ index }}</span> {{ view.name }}
           </router-link>
         </li>
       </ul>
@@ -32,6 +21,28 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      views: [
+        {
+          name: "Home",
+          routePath: "/",
+        },
+        {
+          name: "Destination",
+          routePath: "/destination",
+        },
+        {
+          name: "Crew",
+          routePath: "/crew",
+        },
+        {
+          name: "Technology",
+          routePath: "/technology",
+        },
+      ],
+    };
+  },
 };
 </script>
 
