@@ -29,9 +29,8 @@
                   v-for="(navCrew, index) in crew"
                   :key="index"
                   @click="handleNavigationList(index)"
-                >
-                  <div class="pagination__button"></div>
-                </li>
+                  :class="{ active: person.name == navCrew.name }"
+                ></li>
               </ul>
             </div>
           </div>
@@ -163,21 +162,18 @@ export default {
             gap: 1rem;
 
             li {
-              height: 100%;
-              display: flex;
-              align-items: center;
+              height: 12px;
+              width: 12px;
+              border-radius: 50%;
+              background-color: rgba($white, 0.2);
 
-              .pagination__button {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background-color: $white;
-
-                &:hover {
-                  background-color: rgba($white, 0.6);
-                }
+              &:hover {
+                background-color: rgba($white, 0.6);
               }
             }
+          }
+          .active {
+            background-color: $white;
           }
         }
       }

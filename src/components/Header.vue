@@ -102,7 +102,7 @@ export default {
         align-items: center;
 
         &:hover {
-          box-shadow: 0 -3px 0 0 $white inset;
+          box-shadow: 0 -3px 0 0 rgba($white, 0.25) inset;
           transition: box-shadow 200ms;
         }
 

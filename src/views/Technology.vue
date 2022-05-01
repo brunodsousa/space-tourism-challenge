@@ -24,7 +24,10 @@
                 :key="index"
                 @click="handleNavigationList(index)"
               >
-                <div class="pagination__button">
+                <div
+                  class="pagination__button"
+                  :class="{ active: technology.name == navTechnology.name }"
+                >
                   <p>{{ index == 0 ? 1 : index + 1 }}</p>
                 </div>
               </li>
@@ -150,7 +153,7 @@ export default {
             width: 75px;
             height: 75px;
             border-radius: 50%;
-            border: 1px solid $light-blue;
+            border: 1px solid rgba($light-blue, 0.25);
             display: grid;
             place-content: center;
 
@@ -158,7 +161,19 @@ export default {
               @include heading(4);
               color: $light-blue;
             }
+
+            &:hover {
+              border: 1px solid $light-blue;
+            }
           }
+        }
+      }
+
+      .active {
+        background-color: $white;
+
+        p:first-of-type {
+          color: $dark-blue;
         }
       }
     }
